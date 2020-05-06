@@ -90,13 +90,13 @@ def menu():
 	print(" 2 HOW TO PLAY")
 	print(" 3 EXIT")
 	print()
-	choice = int(input("ENTER THE CHOICE 1 , 2  or 3  :  "))
+	choice = (input("ENTER THE CHOICE 1 , 2  or 3  :  "))
 	
-	if choice == 1:
+	if choice == ("1"):
 		clearscreen()
 		life=7 
 		play_preparation()
-	elif choice == 2:
+	elif choice == ("2"):
 		clearscreen()
 		slow_type("YOU WILL HAVE 7 LIVES.",s=0.1) 
 		slow_type("THERE WILL BE A RANDOM WORD WHICH YOU HAVE TO GUESS LETTER BY LETTER.",s=0.1)
@@ -106,10 +106,14 @@ def menu():
 		print()
 		time.sleep(1)
 		menu()
-	elif choice == 3:
+	elif choice == ("3"):
 		clearscreen()
 		slow_type("EXITING THE GAME.................",s=0.2)
 		sys.exit()
+	else:
+		clearscreen()
+		slow_type("PLEASE ENTER THE CHOICE 1 , 2 or 3", s=0.1)
+		menu()
 
 clearscreen()
 slow_type("    WELCOME TO THE POKEMON NAME GUESSING GAME    ",s=0.22)
